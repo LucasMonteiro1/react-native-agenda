@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import { Calendar, CalendarList, Agenda, LocaleConfig } from 'react-native-calendars';
 
@@ -11,7 +11,7 @@ LocaleConfig.locales['pt-br'] = {
 
 LocaleConfig.defaultLocale = 'pt-br';
 
-export default class App extends React.Component {
+export default class App extends Component {
   state = {
     calendarOpened: false,
   }
@@ -58,7 +58,6 @@ export default class App extends React.Component {
 
             }}
           />
-          {calendarOpened && <Text style={{ backgroundColor: 'red', padding: 10 }}>Voltar</Text>}
         </View>
       </SafeAreaView>
     );
